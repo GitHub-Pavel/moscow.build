@@ -618,13 +618,12 @@ h4 {
 
     .main-menu {
         top: 0;
+        opacity: 1;
     }
 
     .hamburger {
-        z-index: 1000;
-
         &__line {
-            transition: margin 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+            transition: margin 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
 
             &:nth-child(1) {
                 margin: -5px 0;
@@ -652,6 +651,8 @@ h4 {
     color: $white;
     padding: 80px 0;
     overflow-y: scroll;
+    opacity: 0;
+    transition: top 0.4s ease-in-out, opacity 0.3s ease-in-out;
 
     li {
         display: flex;
@@ -694,6 +695,7 @@ h4 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 1000;
     cursor: pointer;
 
     &__line {
@@ -702,6 +704,6 @@ h4 {
         background: $white;
         border-radius: 2px;
         margin: 2px 0;
-        transition: margin 0.3s ease-in-out 0.3s, transform 0.3s ease-in-out;
+        transition: margin 0.2s ease-in-out 0.2s, transform 0.2s ease-in-out;
     }
 }
