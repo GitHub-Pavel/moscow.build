@@ -1,2 +1,2 @@
 # gulp-blank
-gulp preparation for projects
+https://github-pavel.github.io/moscow.build/
