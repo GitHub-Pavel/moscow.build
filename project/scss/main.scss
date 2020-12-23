@@ -193,6 +193,13 @@ h4 {
         padding: 42px 130px;
     }
 
+    &__item {
+        @include col();
+        margin-top: 15px;
+        margin-bottom: 15px;
+        flex: 1 1 calc(25% - 30px);
+    }
+
     @media (max-width: $sm + px) {
         margin-bottom: -30px;
 
@@ -203,10 +210,6 @@ h4 {
 }
 
 .numbers-item {
-    @include col();
-    margin-top: 15px;
-    margin-bottom: 15px;
-    flex: 1 1 calc(25% - 30px);
     min-width: 110px;
     display: flex;
     align-items: center;
