@@ -1,0 +1,229 @@
+/*
+ * ==================================================================================
+ * html
+ * ==================================================================================
+ */
+
+html {
+    font-size: $htmlFontSize + px;
+}
+
+/*
+ * ==================================================================================
+ * body
+ * ==================================================================================
+ */
+
+body {
+    color: $bodyColor;
+    font-family: $fontFamily;
+}
+
+/*
+ * ==================================================================================
+ * text
+ * ==================================================================================
+ */
+
+.text {
+    color: $text-color;
+    font-size: $text-size;
+
+    @media (max-width: $sm + px) {
+        font-size: $text-size-sm;
+    }
+
+    &--size_small {
+        font-size: $text-small-size;
+
+        @media (max-width: $sm + px) {
+            font-size: $text-small-size-sm;
+        }
+    }
+
+    &--size_big {
+        font-size: $text-big-size;
+
+        @media (max-width: $sm + px) {
+            font-size: $text-big-size-sm;
+        }
+    }
+
+    &--weight_bold {
+        font-weight: $bold;
+    }
+}
+
+/*
+ * ==================================================================================
+ * link
+ * ==================================================================================
+ */
+
+.link {
+    color: $link-color;
+    font-size: $link-size;
+    text-decoration: none;
+    display: block;
+
+    @media (max-width: $sm + px) {
+        font-size: $link-size-sm;
+    }
+
+    &:hover,
+    &--active {
+        text-decoration: underline;
+    }
+
+    &--decoration_underline {
+        text-decoration: none;
+
+        &:hover,
+        &--active {
+            text-decoration: underline;
+        }
+    }
+
+    // modifier for article link
+    &--text {
+        display: inline-block;
+
+        text-decoration: none;
+
+        &:hover,
+        &--active {
+            text-decoration: underline;
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * buttons
+ * ==================================================================================
+ */
+
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: $medium;
+    font-size: $button-size;
+    font-family: "Oswald";
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    cursor: pointer;
+    color: $white;
+    background: $black;
+    border: 1px solid $black;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+
+    @media (max-width: $sm + px) {
+        font-size: $button-size-sm;
+    }
+
+    &:hover,
+    &--active {
+        border-color: $dark-grey;
+        background: $dark-grey;
+    }
+
+    &--active {
+        cursor: default;
+    }
+
+    &--size_small {
+        padding: 0.2em 0.5em;
+    }
+
+    &--size_primary {
+        padding: 1em 2.142em;
+    }
+
+    &--size_big {
+        padding: 1.2em 1.875em;
+    }
+
+    &--color_white {
+        background: $white;
+        color: $black;
+        border-color: $white;
+
+        &:hover {
+            background: rgba($white, 0.5);
+            border-color: $black;
+        }
+    }
+
+    &__wrapper {
+        margin: 0 -7.5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        margin: 0 7.5px;
+    }
+}
+
+/*
+ * ==================================================================================
+ * icon
+ * ==================================================================================
+ */
+
+.icon {
+    width: 20px;
+    min-height: 20px;
+}
+
+/*
+ * ==================================================================================
+ * visually-hidden
+ * ==================================================================================
+ */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+[hidden] {
+    display: none;
+}
+
+/*
+ * ==================================================================================
+ * focus
+ * ==================================================================================
+ */
+
+.focus {
+    outline: none;
+
+    &:focus {
+        box-shadow: 0 0 10px rgba($orange, 0.8);
+    }
+
+    &--black {
+        &:focus {
+            box-shadow: 0 0 10px rgba($black, 0.8);
+        }
+    }
+
+    &--text_black {
+        &:focus {
+            box-shadow: none;
+            text-shadow: 0 0 10px rgba($black, 0.8);
+        }
+    }
+}

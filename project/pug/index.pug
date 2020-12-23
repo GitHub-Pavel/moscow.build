@@ -1,0 +1,124 @@
+extends common/layout
+
+block content
+    section.numbers
+        .container
+            .numbers__wrapper
+                .row
+                    - for (let i = 0; i < 4; i++)
+                        .numbers-item
+                            p._title 26
+                            p._subtitle лет
+                            p._description на рынке
+    // numbers
+    section.site-section.project#project
+        .container
+            h2.site-section__title НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ
+            .row.justify-center
+                - for(let i=0; i<3; i++)
+                    .project-item.project__item
+                        a(href="#")._image-wrapper.focus.focus--black
+                            img(src="img/big-projects/0.jpg" alt="projects").project-item__image
+                        h3
+                            a(href="#")._title.focus.focus--text_black  Газпром Арена
+                        p._text.text Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву.
+    //projects
+    section.request#request-one
+        .container._container
+            .request__text
+                p.request__title САМЫЕ УМНЫЕ ПРОЕКТЫ
+                p.request__subtitle РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!
+            a(href="#").request__btn.btn.btn--size_primary.btn--color_white.focus.focus--black
+                span.btn__wrapper
+                    svg(width="18px" height="21px").btn__item
+                        use(href="img/icons.svg#mail-bold")
+                    span.btn__item ВАШ ЗАПРОС
+    // request
+    section.site-section.services#services
+        .container
+            h2.site-section__title ЧЕМ МЫ ЗАНИМАЕМСЯ?
+            .row
+                - for (let i=0; i<6; i++)
+                    .services-item.services__item
+                        svg(width="60px" height="40px")._icon
+                            use(href="img/icons.svg#housetown")
+                        h4._title СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ
+    // services
+    section.portfolio#portfolio
+        - for(let i=0; i<8; i++)
+            a(href="#")._item.portfolio-item
+                img(src="img/screen-project/0.jpg" alt="portfolio").portfolio-item__image
+    // portfolio
+    section.site-section.faq#faq
+        .container._container
+            h2.site-section__title.faq__title ОТВЕТЫ НА ВОПРОСЫ
+            .faq-accordion.accordion
+                - for(let i=0; i<4; i++)
+                    h3._title РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?
+                    ._content
+                        p.text._text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
+    // faq
+    section.site-section.partners#partners
+        .container
+            h2.site-section__title.partners__title наши партнеры
+            .row.justify-center
+                - for (let i=0; i<15; i++)
+                    a(href="#").partners-item.partners__item
+                        img(src="img/partners/0.png" alt="partner")._image
+    // partners
+    section.site-section.reviews#reviews
+        .container
+            h2.site-section__title отзывы о работе с нами
+            .row.justify-center
+                - for(let i=0; i<3; i++)
+                    .reviews-item.reviews__item
+                        ._qoute
+                            p._qoute-char.reviews-item__text-orange “
+                            p._text.text.text--size_small Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.
+                        h4._title 
+                            | Иванов Иван, 
+                            span._text-orange ООО “Газпром-Арена”
+    // reviews
+    section.request#request-two
+        .container._container
+            .request__text
+                p.request__title ХОТИТЕ С НАМИ РАБОТАТЬ?
+                p.request__subtitle ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!
+            a(href="#").request__btn.btn.btn--size_primary.btn--color_white.focus.focus--black
+                span.btn__wrapper
+                    svg(width="18px" height="21px").btn__item
+                        use(href="img/icons.svg#mail-bold")
+                    span.btn__item ВАШ ЗАПРОС
+    // request
+    section.site-section.contacts#contacts
+        .container
+            h2.site-section__title КОНТАКТЫ
+            .row
+                .contacts-item.contacts__item
+                    svg._icon(width="40px" height="50px")
+                        use(href="img/icons.svg#mark")
+                    h3._title АДРЕС:
+                    h3._subtitle НЕВСКИЙ ПРОСПЕКТ 140, ОФИС 140-142
+                .contacts-item.contacts__item
+                    svg._icon(width="40px" height="50px")
+                        use(href="img/icons.svg#phone")
+                    h3._title ТЕЛЕФОН:
+                    h3._subtitle 
+                        a(href="tel:+88121112233") 8 (812) 111-22-33 
+                        br
+                        a(href="tel:+88121112233") 8 (812) 111-22-33
+                .contacts-item.contacts__item
+                    svg._icon(width="40px" height="50px")
+                        use(href="img/icons.svg#clock")
+                    h3._title ВРЕМЯ РАБОТЫ:
+                    h3._subtitle 
+                        | ПН-СБ
+                        br
+                        | 10:00 - 20:00
+                .contacts-item.contacts__item
+                    svg._icon(width="40px" height="50px")
+                        use(href="img/icons.svg#mail-regular")
+                    h3._title E-MAIL:
+                    h3
+                        a(href="mailt:info@vip.ru")._subtitle.-orange INFO@VIP.RU
+    // contacts

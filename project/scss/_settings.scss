@@ -1,0 +1,47 @@
+/*
+ * ==================================================================================
+ * reset
+ * ==================================================================================
+ */
+
+@include reset();
+
+/*
+ * ==================================================================================
+ * standart
+ * ==================================================================================
+ */
+
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.b-lazy {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    max-width: $maxWidth + px;
+    margin: 0 auto;
+}
+
+.container {
+    @include wrapper();
+    max-width: $widthContainer + px;
+}
+
+.row {
+    @include row-flex();
+}
+
+.col {
+    @include col();
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
