@@ -9,4 +9,21 @@ $(function () {
     })
 
     $(".accordion").accordion()
+
+    $('.hamburger').click(function (e) {
+        e.preventDefault()
+        $('body').toggleClass('menu-active');
+    })
+
+    $(".main-menu a").click(function (e) {
+        e.preventDefault()
+
+        $('body').removeClass('menu-active');
+
+        let linkTo = $(this).attr('href')
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(linkTo).offset().top
+        }, 2000)
+    })
 })
